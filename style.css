@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .comingsoonComponent {
+  max-width: 375px;
+  height: 100%;
+}
+.container .comingsoonComponent header .logo {
+  padding: 2rem;
+}
+.container .comingsoonComponent .contentBox .title {
+  width: 100%;
+  text-align: center;
+  padding-block-start: 2rem;
+  padding-block-end: 1rem;
+  padding-inline: 2rem;
+}
+.container .comingsoonComponent .contentBox .title h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+.container .comingsoonComponent .contentBox .title h1 span {
+  color: hsl(0deg, 93%, 68%);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.container .comingsoonComponent .contentBox .content {
+  padding-inline: 1rem;
+  text-align: center;
+}
+.container .comingsoonComponent .contentBox .content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: hsl(0deg, 93%, 68%);
+  line-height: 1.5;
+}
+.container .comingsoonComponent .subscription {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-block-start: 2rem;
+}
+.container .comingsoonComponent .subscription input {
+  height: 2.5rem;
+  border-radius: 4rem;
+  border: 1px hsl(0deg, 93%, 68%) solid;
+  font-size: 1rem;
+  color: hsl(0deg, 93%, 68%);
+}
+.container .comingsoonComponent .subscription input[type=text] {
+  padding-inline: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.container .comingsoonComponent .subscription input[type=text]::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: hsl(0deg, 93%, 68%);
+}
+.container .comingsoonComponent .subscription input[type=submit] {
+  width: 3rem;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(./images/icon-arrow.svg) 1rem no-repeat, hsl(0deg, 93%, 68%);
+}/*# sourceMappingURL=style.css.map */

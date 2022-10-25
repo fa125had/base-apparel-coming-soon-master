@@ -1,0 +1,116 @@
+//colors
+$color_primary_desaturatedRed: hsl(0, 36%, 70%);
+$color_primary_softRed: hsl(0, 93%, 68%);
+$color_neutral_darkGrayishRed: hsl(0, 6%, 24%);
+$grafient_whity: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient_redy: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+//Layout
+$mobile: 375px;
+$desktop: 1440px;
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+$mainfont: 'Josefin Sans', sans-serif;
+@mixin lightFont {
+    font-family: $mainfont;
+    font-weight: 300;
+}
+@mixin regularFont {
+    font-family: $mainfont;
+    font-weight: 400;
+}
+@mixin semiBold {
+    font-family: $mainfont;
+    font-weight: 600;
+}
+* {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .comingsoonComponent {
+        // border: 1px solid black;
+        max-width: $mobile;
+        height: 100%;
+        header {
+            .logo {
+                padding: 2rem;
+                // border: 1px solid red;
+            }
+        }
+        .contentBox {
+            .title {
+                // border: 1px solid red;
+                width: 100%;
+                text-align: center;
+                padding-block-start: 2rem;
+                padding-block-end: 1rem;
+                padding-inline: 2rem;
+                h1 {
+                    @include semiBold();
+                    font-size: 2rem;
+                    letter-spacing: .5rem;
+                    text-transform: uppercase;
+                    span {
+                        color: $color_primary_softRed;
+                        @include lightFont();
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .content {
+                padding-inline: 1rem;
+                text-align: center;
+                p {
+                    @include lightFont();
+                    color: $color_primary_softRed;
+                    line-height: 1.5;
+                }
+            }
+        }
+        .subscription {
+            // border: 1px solid red;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-block-start: 2rem;
+            input {
+                height: 2.5rem;
+                border-radius: 4rem;
+                border: 1px $color_primary_softRed solid;
+                font-size: 1rem;
+                color: $color_primary_softRed;
+                &[type=text] {
+                    padding-inline: 1rem;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    &::placeholder {
+                        @include lightFont();
+                        color: $color_primary_softRed;
+
+                    }
+                }
+                &[type=submit] {
+                    // background-color: $color_primary_softRed;
+                    width: 3rem;
+                    color: white;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: url(./images/icon-arrow.svg) 1rem no-repeat, $color_primary_softRed;
+                }
+            }
+        }
+    }
+}
