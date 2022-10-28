@@ -10,107 +10,179 @@ $desktop: 1440px;
 //Fonts
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 $mainfont: 'Josefin Sans', sans-serif;
+
 @mixin lightFont {
     font-family: $mainfont;
     font-weight: 300;
 }
+
 @mixin regularFont {
     font-family: $mainfont;
     font-weight: 400;
 }
+
 @mixin semiBold {
     font-family: $mainfont;
     font-weight: 600;
 }
+
 * {
     font-size: 16px;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 .container {
     width: 100vw;
-    height: 100vh;
+    height: 865px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .comingsoonComponent {
-        // border: 1px solid black;
         max-width: $mobile;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: $grafient_whity;
+
         header {
+            width: 100%;
+            max-width: $mobile;
+
             .logo {
                 padding: 2rem;
-                // border: 1px solid red;
+
+                img {
+                    width: 8rem;
+                }
+            }
+
+            .heroPhoto {
+                img {
+                    width: 100%;
+                    max-width: $mobile;
+                }
             }
         }
+
         .contentBox {
             .title {
-                // border: 1px solid red;
                 width: 100%;
                 text-align: center;
-                padding-block-start: 2rem;
+                padding-block-start: 3rem;
                 padding-block-end: 1rem;
                 padding-inline: 2rem;
+
                 h1 {
                     @include semiBold();
-                    font-size: 2rem;
+                    font-size: 3rem;
                     letter-spacing: .5rem;
                     text-transform: uppercase;
+                    color: $color_neutral_darkGrayishRed;
+
                     span {
-                        color: $color_primary_softRed;
+                        color: $color_primary_desaturatedRed;
                         @include lightFont();
-                        font-size: 1.5rem;
+                        font-size: 3rem;
                     }
                 }
             }
+
             .content {
-                padding-inline: 1rem;
+                padding-inline: 0.7rem;
                 text-align: center;
+
                 p {
-                    @include lightFont();
-                    color: $color_primary_softRed;
+                    @include semiBold();
+                    color: $color_primary_desaturatedRed;
                     line-height: 1.5;
                 }
             }
         }
+
         .subscription {
-            // border: 1px solid red;
-            width: 100%;
+            width: 90%;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             margin-block-start: 2rem;
-            input {
-                height: 2.5rem;
-                border-radius: 4rem;
-                border: 1px $color_primary_softRed solid;
-                font-size: 1rem;
-                color: $color_primary_softRed;
-                &[type=text] {
-                    padding-inline: 1rem;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    &::placeholder {
-                        @include lightFont();
+            form {
+                width: 100%;
+                .submitMessage {
+                    // display: none;
+                    text-align: left;
+                    p {
+                        font-size: 0.9rem;
+                        margin-top: 3.5rem;
+                        padding-left: 1rem;
                         color: $color_primary_softRed;
-
+                        @include semiBold();
+    
                     }
                 }
-                &[type=submit] {
-                    // background-color: $color_primary_softRed;
-                    width: 3rem;
-                    color: white;
+                input {
+                    height: 3rem;
+                    border-radius: 4rem;
+                    border: 1px $color_primary_desaturatedRed solid;
+                    font-size: 1rem;
+    
+                    &[type=text] {
+                        padding-inline: 1rem;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        color: $color_neutral_darkGrayishRed;
+    
+                        &::placeholder {
+                            @include lightFont();
+                            color: $color_primary_desaturatedRed;
+    
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+    
+                    &[type=submit] {
+                        width: 6rem;
+                        text-align: right;
+                        border: none;
+                        color: white;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background: url(./images/icon-arrow.svg) 50% no-repeat, $gradient_redy;
+                        &:hover {
+                            cursor: pointer;
+                            box-shadow: 0px 5px 0.5rem hsla(0, 6%, 64%, 0.9);
+                            background: url(./images/icon-arrow.svg) 50% no-repeat, $color_primary_desaturatedRed;
+
+                        }
+                    }
+                }
+                #errorIcon {
+                    // display: none;
                     position: absolute;
-                    top: 0;
-                    right: 0;
-                    background: url(./images/icon-arrow.svg) 1rem no-repeat, $color_primary_softRed;
+                    top: 15%;
+                    left: 60%;
                 }
             }
+        }
+    }
+
+    footer {
+        width: 100%;
+        color: $color_neutral_darkGrayishRed;
+        text-align: center;
+        a {
+            color: $color_primary_desaturatedRed;
         }
     }
 }

@@ -8,7 +8,7 @@
 
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 865px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,72 +17,126 @@
 .container .comingsoonComponent {
   max-width: 375px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+}
+.container .comingsoonComponent header {
+  width: 100%;
+  max-width: 375px;
 }
 .container .comingsoonComponent header .logo {
   padding: 2rem;
 }
+.container .comingsoonComponent header .logo img {
+  width: 8rem;
+}
+.container .comingsoonComponent header .heroPhoto img {
+  width: 100%;
+  max-width: 375px;
+}
 .container .comingsoonComponent .contentBox .title {
   width: 100%;
   text-align: center;
-  padding-block-start: 2rem;
+  padding-block-start: 3rem;
   padding-block-end: 1rem;
   padding-inline: 2rem;
 }
 .container .comingsoonComponent .contentBox .title h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
+  color: hsl(0deg, 6%, 24%);
 }
 .container .comingsoonComponent .contentBox .title h1 span {
-  color: hsl(0deg, 93%, 68%);
+  color: hsl(0deg, 36%, 70%);
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
 .container .comingsoonComponent .contentBox .content {
-  padding-inline: 1rem;
+  padding-inline: 0.7rem;
   text-align: center;
 }
 .container .comingsoonComponent .contentBox .content p {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  color: hsl(0deg, 93%, 68%);
+  font-weight: 600;
+  color: hsl(0deg, 36%, 70%);
   line-height: 1.5;
 }
 .container .comingsoonComponent .subscription {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   margin-block-start: 2rem;
 }
-.container .comingsoonComponent .subscription input {
-  height: 2.5rem;
-  border-radius: 4rem;
-  border: 1px hsl(0deg, 93%, 68%) solid;
-  font-size: 1rem;
-  color: hsl(0deg, 93%, 68%);
+.container .comingsoonComponent .subscription form {
+  width: 100%;
 }
-.container .comingsoonComponent .subscription input[type=text] {
+.container .comingsoonComponent .subscription form .submitMessage {
+  text-align: left;
+}
+.container .comingsoonComponent .subscription form .submitMessage p {
+  font-size: 0.9rem;
+  margin-top: 3.5rem;
+  padding-left: 1rem;
+  color: hsl(0deg, 93%, 68%);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+}
+.container .comingsoonComponent .subscription form input {
+  height: 3rem;
+  border-radius: 4rem;
+  border: 1px hsl(0deg, 36%, 70%) solid;
+  font-size: 1rem;
+}
+.container .comingsoonComponent .subscription form input[type=text] {
   padding-inline: 1rem;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
+  color: hsl(0deg, 6%, 24%);
 }
-.container .comingsoonComponent .subscription input[type=text]::placeholder {
+.container .comingsoonComponent .subscription form input[type=text]::placeholder {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  color: hsl(0deg, 93%, 68%);
+  color: hsl(0deg, 36%, 70%);
 }
-.container .comingsoonComponent .subscription input[type=submit] {
-  width: 3rem;
+.container .comingsoonComponent .subscription form input[type=text]:focus {
+  outline: none;
+}
+.container .comingsoonComponent .subscription form input[type=submit] {
+  width: 6rem;
+  text-align: right;
+  border: none;
   color: white;
   position: absolute;
   top: 0;
   right: 0;
-  background: url(./images/icon-arrow.svg) 1rem no-repeat, hsl(0deg, 93%, 68%);
+  background: url(./images/icon-arrow.svg) 50% no-repeat, linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+}
+.container .comingsoonComponent .subscription form input[type=submit]:hover {
+  cursor: pointer;
+  box-shadow: 0px 5px 0.5rem hsla(0deg, 6%, 64%, 0.9);
+  background: url(./images/icon-arrow.svg) 50% no-repeat, hsl(0deg, 36%, 70%);
+}
+.container .comingsoonComponent .subscription form #errorIcon {
+  position: absolute;
+  top: 15%;
+  left: 60%;
+}
+.container footer {
+  width: 100%;
+  color: hsl(0deg, 6%, 24%);
+  text-align: center;
+}
+.container footer a {
+  color: hsl(0deg, 36%, 70%);
 }/*# sourceMappingURL=style.css.map */
