@@ -58,15 +58,20 @@ $mainfont: 'Josefin Sans', sans-serif;
                 padding: 2rem;
 
                 img {
-                    width: 8rem;
+                    width: 7rem;
                 }
             }
 
             .heroPhoto {
-                img {
-                    width: 100%;
-                    max-width: $mobile;
-                }
+                // border: 1px solid red;
+                background: url(./images/hero-mobile.jpg) no-repeat;
+                background-size: contain;
+                width: $mobile;
+                height: 15.65rem;
+                // img {
+                //     width: 100%;
+                //     max-width: $mobile;
+                // }
             }
         }
 
@@ -74,8 +79,8 @@ $mainfont: 'Josefin Sans', sans-serif;
             .title {
                 width: 100%;
                 text-align: center;
-                padding-block-start: 3rem;
-                padding-block-end: 1rem;
+                padding-block-start: 4rem;
+                padding-block-end: 1.5rem;
                 padding-inline: 2rem;
 
                 h1 {
@@ -112,26 +117,30 @@ $mainfont: 'Josefin Sans', sans-serif;
             align-items: center;
             position: relative;
             margin-block-start: 2rem;
+
             form {
                 width: 100%;
+
                 .submitMessage {
                     // display: none;
                     text-align: left;
+
                     p {
                         font-size: 0.9rem;
                         margin-top: 3.5rem;
                         padding-left: 1rem;
                         color: $color_primary_softRed;
                         @include semiBold();
-    
+
                     }
                 }
+
                 input {
-                    height: 3rem;
+                    height: 3.1rem;
                     border-radius: 4rem;
                     border: 1px $color_primary_desaturatedRed solid;
                     font-size: 1rem;
-    
+
                     &[type=text] {
                         padding-inline: 1rem;
                         position: absolute;
@@ -139,19 +148,20 @@ $mainfont: 'Josefin Sans', sans-serif;
                         right: 0;
                         left: 0;
                         color: $color_neutral_darkGrayishRed;
-    
+
                         &::placeholder {
                             @include lightFont();
                             color: $color_primary_desaturatedRed;
-    
+
                         }
+
                         &:focus {
                             outline: none;
                         }
                     }
-    
+
                     &[type=submit] {
-                        width: 6rem;
+                        width: 4rem;
                         text-align: right;
                         border: none;
                         color: white;
@@ -159,6 +169,7 @@ $mainfont: 'Josefin Sans', sans-serif;
                         top: 0;
                         right: 0;
                         background: url(./images/icon-arrow.svg) 50% no-repeat, $gradient_redy;
+
                         &:hover {
                             cursor: pointer;
                             box-shadow: 0px 5px 0.5rem hsla(0, 6%, 64%, 0.9);
@@ -167,11 +178,12 @@ $mainfont: 'Josefin Sans', sans-serif;
                         }
                     }
                 }
+
                 #errorIcon {
                     // display: none;
                     position: absolute;
                     top: 15%;
-                    left: 60%;
+                    left: 70%;
                 }
             }
         }
@@ -181,8 +193,191 @@ $mainfont: 'Josefin Sans', sans-serif;
         width: 100%;
         color: $color_neutral_darkGrayishRed;
         text-align: center;
+
         a {
             color: $color_primary_desaturatedRed;
         }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        height: 865px;
+
+        .comingsoonComponent {
+            background: url(./images/bg-pattern-desktop.svg) no-repeat, $grafient_whity;
+            width: 100%;
+            max-width: $desktop;
+            display: grid;
+            grid-template-rows: 10rem 1fr;
+            grid-template-columns: 8rem 30rem repeat(4, 1fr);
+
+            header {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                width: 100%;
+                position: relative;
+
+                .logo {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    padding: 0;
+
+                    img {
+                        width: 10rem;
+                    }
+                }
+
+                .heroPhoto {
+                    display: none;
+                }
+            }
+
+            .heroDesktop {
+                background: url(./images/hero-desktop.jpg) no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                grid-column-start: 4;
+                grid-column-end: 7;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+            .contentBox {
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                align-self: start;
+                line-height: 1.2;
+                text-align: left;
+
+                .title {
+                    width: 100%;
+                    text-align: left;
+                    padding-block-start: 5rem;
+                    padding-block-end: 0rem;
+                    padding-inline: 0rem;
+
+                    h1 {
+                        @include semiBold();
+                        font-size: 4rem;
+                        letter-spacing: 1rem;
+                        text-transform: uppercase;
+                        color: $color_neutral_darkGrayishRed;
+
+                        span {
+                            color: $color_primary_desaturatedRed;
+                            @include lightFont();
+                            font-size: 4rem;
+                        }
+                    }
+                }
+
+                .content {
+                    padding-inline-start: 0rem;
+                    padding-inline-end: 1.5rem;
+                    padding-block-start: 2rem;
+                    padding-block-end: 2rem;
+                    text-align: left;
+
+                    p {
+                        @include semiBold();
+                        color: $color_primary_desaturatedRed;
+                        line-height: 1.5;
+                    }
+                }
+            }
+
+            .subscription {
+                grid-row-start: 2;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                align-self: center;
+                width: 90%;
+                margin-block-start: 20rem;
+
+                form {
+                    width: 100%;
+
+                    .submitMessage {
+                        text-align: left;
+
+                        p {
+                            font-size: 0.9rem;
+                            margin-top: 3.5rem;
+                            padding-left: 1rem;
+                            color: $color_primary_softRed;
+                            @include semiBold();
+
+                        }
+                    }
+
+                    input {
+                        height: 3.1rem;
+                        border-radius: 4rem;
+                        border: 1px $color_primary_desaturatedRed solid;
+                        font-size: 1rem;
+
+                        &[type=text] {
+                            padding-inline: 1rem;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            color: $color_neutral_darkGrayishRed;
+
+                            &::placeholder {
+                                @include lightFont();
+                                color: $color_primary_desaturatedRed;
+
+                            }
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        &[type=submit] {
+                            width: 4rem;
+                            text-align: right;
+                            border: none;
+                            color: white;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            background: url(./images/icon-arrow.svg) 50% no-repeat, $gradient_redy;
+
+                            &:hover {
+                                cursor: pointer;
+                                box-shadow: 0px 5px 0.5rem hsla(0, 6%, 64%, 0.9);
+                                background: url(./images/icon-arrow.svg) 50% no-repeat, $color_primary_desaturatedRed;
+
+                            }
+                        }
+                    }
+
+                    #errorIcon {
+                        // display: none;
+                        position: absolute;
+                        top: 15%;
+                        left: 75%;
+                    }
+                }
+            }
+        }
+
     }
 }

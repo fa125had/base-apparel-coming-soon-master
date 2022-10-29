@@ -31,17 +31,19 @@
   padding: 2rem;
 }
 .container .comingsoonComponent header .logo img {
-  width: 8rem;
+  width: 7rem;
 }
-.container .comingsoonComponent header .heroPhoto img {
-  width: 100%;
-  max-width: 375px;
+.container .comingsoonComponent header .heroPhoto {
+  background: url(./images/hero-mobile.jpg) no-repeat;
+  background-size: contain;
+  width: 375px;
+  height: 15.65rem;
 }
 .container .comingsoonComponent .contentBox .title {
   width: 100%;
   text-align: center;
-  padding-block-start: 3rem;
-  padding-block-end: 1rem;
+  padding-block-start: 4rem;
+  padding-block-end: 1.5rem;
   padding-inline: 2rem;
 }
 .container .comingsoonComponent .contentBox .title h1 {
@@ -91,7 +93,7 @@
   font-weight: 600;
 }
 .container .comingsoonComponent .subscription form input {
-  height: 3rem;
+  height: 3.1rem;
   border-radius: 4rem;
   border: 1px hsl(0deg, 36%, 70%) solid;
   font-size: 1rem;
@@ -113,7 +115,7 @@
   outline: none;
 }
 .container .comingsoonComponent .subscription form input[type=submit] {
-  width: 6rem;
+  width: 4rem;
   text-align: right;
   border: none;
   color: white;
@@ -130,7 +132,7 @@
 .container .comingsoonComponent .subscription form #errorIcon {
   position: absolute;
   top: 15%;
-  left: 60%;
+  left: 70%;
 }
 .container footer {
   width: 100%;
@@ -139,4 +141,162 @@
 }
 .container footer a {
   color: hsl(0deg, 36%, 70%);
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 100%;
+    height: 865px;
+  }
+  .container .comingsoonComponent {
+    background: url(./images/bg-pattern-desktop.svg) no-repeat, linear-gradient(135deg, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
+    width: 100%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-rows: 10rem 1fr;
+    grid-template-columns: 8rem 30rem repeat(4, 1fr);
+  }
+  .container .comingsoonComponent header {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    position: relative;
+  }
+  .container .comingsoonComponent header .logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 0;
+  }
+  .container .comingsoonComponent header .logo img {
+    width: 10rem;
+  }
+  .container .comingsoonComponent header .heroPhoto {
+    display: none;
+  }
+  .container .comingsoonComponent .heroDesktop {
+    background: url(./images/hero-desktop.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .container .comingsoonComponent .contentBox {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: start;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .container .comingsoonComponent .contentBox .title {
+    width: 100%;
+    text-align: left;
+    padding-block-start: 5rem;
+    padding-block-end: 0rem;
+    padding-inline: 0rem;
+  }
+  .container .comingsoonComponent .contentBox .title h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: hsl(0deg, 6%, 24%);
+  }
+  .container .comingsoonComponent .contentBox .title h1 span {
+    color: hsl(0deg, 36%, 70%);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 4rem;
+  }
+  .container .comingsoonComponent .contentBox .content {
+    padding-inline-start: 0rem;
+    padding-inline-end: 1.5rem;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+    text-align: left;
+  }
+  .container .comingsoonComponent .contentBox .content p {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    color: hsl(0deg, 36%, 70%);
+    line-height: 1.5;
+  }
+  .container .comingsoonComponent .subscription {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: center;
+    width: 90%;
+    margin-block-start: 20rem;
+  }
+  .container .comingsoonComponent .subscription form {
+    width: 100%;
+  }
+  .container .comingsoonComponent .subscription form .submitMessage {
+    text-align: left;
+  }
+  .container .comingsoonComponent .subscription form .submitMessage p {
+    font-size: 0.9rem;
+    margin-top: 3.5rem;
+    padding-left: 1rem;
+    color: hsl(0deg, 93%, 68%);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+  }
+  .container .comingsoonComponent .subscription form input {
+    height: 3.1rem;
+    border-radius: 4rem;
+    border: 1px hsl(0deg, 36%, 70%) solid;
+    font-size: 1rem;
+  }
+  .container .comingsoonComponent .subscription form input[type=text] {
+    padding-inline: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: hsl(0deg, 6%, 24%);
+  }
+  .container .comingsoonComponent .subscription form input[type=text]::placeholder {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    color: hsl(0deg, 36%, 70%);
+  }
+  .container .comingsoonComponent .subscription form input[type=text]:focus {
+    outline: none;
+  }
+  .container .comingsoonComponent .subscription form input[type=submit] {
+    width: 4rem;
+    text-align: right;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(./images/icon-arrow.svg) 50% no-repeat, linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  }
+  .container .comingsoonComponent .subscription form input[type=submit]:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 0.5rem hsla(0deg, 6%, 64%, 0.9);
+    background: url(./images/icon-arrow.svg) 50% no-repeat, hsl(0deg, 36%, 70%);
+  }
+  .container .comingsoonComponent .subscription form #errorIcon {
+    position: absolute;
+    top: 15%;
+    left: 75%;
+  }
 }/*# sourceMappingURL=style.css.map */
