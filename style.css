@@ -82,6 +82,7 @@
   width: 100%;
 }
 .container .comingsoonComponent .subscription form .submitMessage {
+  display: none;
   text-align: left;
 }
 .container .comingsoonComponent .subscription form .submitMessage p {
@@ -130,6 +131,7 @@
   background: url(./images/icon-arrow.svg) 50% no-repeat, hsl(0deg, 36%, 70%);
 }
 .container .comingsoonComponent .subscription form #errorIcon {
+  display: none;
   position: absolute;
   top: 15%;
   left: 70%;
@@ -248,6 +250,7 @@
   }
   .container .comingsoonComponent .subscription form .submitMessage {
     text-align: left;
+    display: none;
   }
   .container .comingsoonComponent .subscription form .submitMessage p {
     font-size: 0.9rem;
@@ -280,7 +283,7 @@
     outline: none;
   }
   .container .comingsoonComponent .subscription form input[type=submit] {
-    width: 4rem;
+    width: 5rem;
     text-align: right;
     border: none;
     color: white;
@@ -295,6 +298,7 @@
     background: url(./images/icon-arrow.svg) 50% no-repeat, hsl(0deg, 36%, 70%);
   }
   .container .comingsoonComponent .subscription form #errorIcon {
+    display: none;
     position: absolute;
     top: 15%;
     left: 75%;

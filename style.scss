@@ -63,15 +63,10 @@ $mainfont: 'Josefin Sans', sans-serif;
             }
 
             .heroPhoto {
-                // border: 1px solid red;
                 background: url(./images/hero-mobile.jpg) no-repeat;
                 background-size: contain;
                 width: $mobile;
                 height: 15.65rem;
-                // img {
-                //     width: 100%;
-                //     max-width: $mobile;
-                // }
             }
         }
 
@@ -122,7 +117,7 @@ $mainfont: 'Josefin Sans', sans-serif;
                 width: 100%;
 
                 .submitMessage {
-                    // display: none;
+                    display: none;
                     text-align: left;
 
                     p {
@@ -180,7 +175,7 @@ $mainfont: 'Josefin Sans', sans-serif;
                 }
 
                 #errorIcon {
-                    // display: none;
+                    display: none;
                     position: absolute;
                     top: 15%;
                     left: 70%;
@@ -314,6 +309,7 @@ $mainfont: 'Josefin Sans', sans-serif;
 
                     .submitMessage {
                         text-align: left;
+                        display: none;
 
                         p {
                             font-size: 0.9rem;
@@ -351,7 +347,7 @@ $mainfont: 'Josefin Sans', sans-serif;
                         }
 
                         &[type=submit] {
-                            width: 4rem;
+                            width: 5rem;
                             text-align: right;
                             border: none;
                             color: white;
@@ -370,7 +366,7 @@ $mainfont: 'Josefin Sans', sans-serif;
                     }
 
                     #errorIcon {
-                        // display: none;
+                        display: none;
                         position: absolute;
                         top: 15%;
                         left: 75%;

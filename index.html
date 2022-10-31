@@ -34,11 +34,11 @@
         </article>
       </section>
       <div class="subscription">
-        <form action="#" method="post">
+        <form name="subscriptionForm" action="#" onsubmit="return mailValidator()" method="post">
           <input type="text" maxlength="32" name="usermail" id="usermail" placeholder="Email Address">
           <div class="submitMessage">
             <p id="submitMessage">
-              Please provide a valid email
+              
             </p>
           </div>
           <input type="submit" value="">
@@ -54,7 +54,7 @@
     </footer>
   </main>
 
-  <script src="subscription.js"></script>
+  <script src="./subscription.js"></script>
 </body>
 
 </html>
